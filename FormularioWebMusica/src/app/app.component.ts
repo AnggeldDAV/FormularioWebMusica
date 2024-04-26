@@ -1,10 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  selector: 'app-form-usuario',
+  templateUrl: './form-usuario.component.html',
+  styleUrls: ['./form-usuario.component.css']
 })
-export class AppComponent {
-  title = 'FormularioWebMusica';
-}
+export class FormUsuarioComponent { }
