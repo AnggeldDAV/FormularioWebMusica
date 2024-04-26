@@ -4,26 +4,42 @@
     <div>
       <label>Título: </label>
       <input type="text" id="tituloCanciones" name="tituloCanciones"  formControlName="tituloCanciones"/>
+      <div *ngIf="this.formCanciones.get('tituloCanciones')?.invalid && (this.formCanciones.get('tituloCanciones')?.dirty || this.formCanciones.get('tituloCanciones')?.touched)">
+        Titulo invalido
+      </div>
     </div>
     <div>
       <label>Género: </label>
-      <input type="text" id="generoCanciones" name="generoCanciones" formControlName="generoCanciones"/>
+      <input type="text" id="generoCanciones" name="generoCanciones" formControlName="generoCanciones" />
+      <div *ngIf="this.formCanciones.get('generoCanciones')?.invalid && (this.formCanciones.get('generoCanciones')?.dirty || this.formCanciones.get('generoCanciones')?.touched)">
+        Género invalido
+      </div>
     </div>
     <div>
       <label>Artista: </label>
-      <input type="text" id="artistaCanciones" name="artistaCanciones" formControlName="artistaCanciones"/>
+      <input type="text" id="artistaCanciones" name="artistaCanciones" formControlName="artistaCanciones" />
+      <div *ngIf="this.formCanciones.get('artistaCanciones')?.invalid && (this.formCanciones.get('artistaCanciones')?.dirty || this.formCanciones.get('artistaCanciones')?.touched)">
+        Artista invalido
+      </div>
     </div>
     <div>
       <label>Disco: </label>
-      <input type="text" id="discoCanciones" name="discoCanciones" formControlName="discoCanciones"/>
+      <input type="text" id="discoCanciones" name="discoCanciones" formControlName="discoCanciones" />
+      <div *ngIf="this.formCanciones.get('discoCanciones')?.invalid && (this.formCanciones.get('discoCanciones')?.dirty || this.formCanciones.get('discoCanciones')?.touched)">
+        Disco invalido
+      </div>
     </div>
     <div>
       <label>Año: </label>
-      <input type="date" id="anyoCanciones" name="anyoCanciones" formControlName="anyoCanciones"/>
+      <input type="date" id="anyoCanciones" name="anyoCanciones" formControlName="anyoCanciones" />
+      <div *ngIf="this.formCanciones.get('anyoCanciones')?.invalid && (this.formCanciones.get('anyoCanciones')?.dirty || this.formCanciones.get('anyoCanciones')?.touched)">
+        Año invalido
+      </div>
     </div>
     <div>
       <button type="submit">Submit</button>
     </div>
+    {{mensaje}}
   </fieldset>
 </form>
 
