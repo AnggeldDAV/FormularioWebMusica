@@ -13,6 +13,4 @@ export class FormConciertoComponent {
     fechaConcierto: new FormControl(),
     generoConcierto: new FormControl()
   });
-
-
 }
