@@ -16,6 +16,7 @@ export class FormConciertoComponent {
 
   validar() {
     let errorArtista = document.getElementById('validacionArtista');
+    let errorFecha = document.getElementById('validacionFecha');
     let errorLugar = document.getElementById('validacionLugar');
     let errorGenero = document.getElementById('validacionGenero');
 
@@ -29,6 +30,11 @@ export class FormConciertoComponent {
       if(errorArtista != null) errorArtista.innerHTML = 'Introduce un nombre de artista válido';
     } else {
       if(errorArtista != null) errorArtista.innerHTML = '';
+    }
+    if (!this.formConcierto.get('lugarFecha')?.valid) {
+      if (errorFecha != null) errorFecha.innerHTML = 'Introduce un lugar válido';
+    } else {
+      if (errorFecha != null) errorFecha.innerHTML = '';
     }
     if (!this.formConcierto.get('lugarConcierto')?.valid) {
       if (errorLugar != null) errorLugar.innerHTML = 'Introduce un lugar válido';
