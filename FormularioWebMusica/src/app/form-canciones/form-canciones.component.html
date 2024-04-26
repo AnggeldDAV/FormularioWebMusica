@@ -1,0 +1,29 @@
+<form [formGroup]="formCanciones" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <legend>Canciones</legend>
+    <div>
+      <label>Título: </label>
+      <input type="text" id="tituloCanciones" name="tituloCanciones"  formControlName="tituloCanciones"/>
+    </div>
+    <div>
+      <label>Género: </label>
+      <input type="text" id="generoCanciones" name="generoCanciones" formControlName="generoCanciones"/>
+    </div>
+    <div>
+      <label>Artista: </label>
+      <input type="text" id="artistaCanciones" name="artistaCanciones" formControlName="artistaCanciones"/>
+    </div>
+    <div>
+      <label>Disco: </label>
+      <input type="text" id="discoCanciones" name="discoCanciones" formControlName="discoCanciones"/>
+    </div>
+    <div>
+      <label>Año: </label>
+      <input type="date" id="anyoCanciones" name="anyoCanciones" formControlName="anyoCanciones"/>
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </fieldset>
+</form>
+
