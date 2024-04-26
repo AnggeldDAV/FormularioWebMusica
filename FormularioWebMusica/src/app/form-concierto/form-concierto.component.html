@@ -4,26 +4,26 @@
   <div>
     <div>
       <label for="conciertoArtista">Artista</label>
-      <input type="text" id="conciertoArtista" formControlName="artistaConcierto"/>
-      <div id="validacionArtista"></div>
+      <input type="text" id="conciertoArtista" formControlName="artistaConcierto" />
     </div>
+    <div id="validacionArtista"></div>
     <div>
       <label for="conciertoLugar">Lugar</label>
       <input type="text" id="conciertoLugar" formControlName="lugarConcierto" />
-      <div id="validacionLugar"></div>
     </div>
+    <div id="validacionLugar"></div>
   </div>
   <div>
     <div>
       <label for="conciertoFecha">Fecha</label>
       <input type="date" id="conciertoFecha" formControlName="fechaConcierto" />
-      <div id="validacionFecha"></div>
     </div>
+    <div id="validacionFecha"></div>
     <div>
       <label for="conciertoGenero">Género</label>
       <input type="text" id="conciertoGenero" formControlName="generoConcierto" />
-      <div id="validacionGenero"></div>
     </div>
+    <div id="validacionGenero"></div>
   </div>
   <div>
     <button (click)="validar()" type="submit">Enviar</button>
