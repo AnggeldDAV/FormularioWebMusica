@@ -1,0 +1,35 @@
+
+
+<form [formGroup]="formArtistas" (ngSubmit)="submit()">
+  <div>
+    <label>Artista:</label>
+    <input type="text" id="artistasNombre" name="artistasNombre" formControlName="artistasNombre" required />
+    <!--<span *ngIf="this.formArtistas.get('artistasNombre')?.errors?.['required']">
+      (El nombre del artista no puede quedar vacío)
+    </span>
+    <span *ngIf="this.formArtistas.get('artistasNombre')?.errors?.['minlength']">
+      (Debe tener como mínimo 3 caracteres)
+    </span>-->
+  </div>
+  <div>
+    <label>Año Nacimiento::</label>
+    <input type="date" id="artistasAnyo" name="artistasAnyo" formControlName="artistasAnyo" />
+  </div>
+  <div>
+    <label>Pertenece al grupo:</label>
+    <input type="text" id="artistasGrupo" name="artistasGrupo" formControlName="artistasGrupo" />
+  </div>
+  <div>
+    <label>Género/Tipo de Música:</label>
+    <input type="text" id="artistasGenero" name="artistasGenero" formControlName="artistasGenero" />
+  </div>
+  <div>
+    <label>Album:</label>
+    <input type="text" id="artistasAlbum" name="artistasAlbum" formControlName="artistasAlbum" />
+  </div>
+  <div>
+    <button type="submit">Enviar</button>
+    <button type="reset">Reset</button>
+  </div>
+  </form>
+<div>{{resultado}}</div>
