@@ -4,12 +4,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
-import { FormDiscoComponent } from './form-disco/form-disco.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormDiscoComponent
+    
   ],
   imports: [
     BrowserModule,
