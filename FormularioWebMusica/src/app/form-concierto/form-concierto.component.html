@@ -1,0 +1,28 @@
+
+
+<form [formGroup]="formConcierto">
+  <div>
+    <p>
+      <label for="conciertoArtista">Artista</label>
+      <input type="text" id="conciertoArtista" formControlName="artistaConcierto"/>
+    </p>
+    <p>
+      <label for="conciertoLugar">Lugar</label>
+      <input type="text" id="conciertoLugar" formControlName="lugarConcierto"/>
+    </p>
+  </div>
+  <div>
+    <p>
+      <label for="conciertoFecha">Fecha</label>
+      <input type="date" id="conciertoFecha" formControlName="fechaConcierto"/>
+    </p>
+    <p>
+      <label for="conciertoGenero">Género</label>
+      <input type="text" id="conciertoGenero" formControlName="generoConcierto"/>
+    </p>
+  </div>
+  <div>
+    <button type="submit">Enviar</button>
+    <button type="reset">Reset</button>
+  </div>
+</form>
