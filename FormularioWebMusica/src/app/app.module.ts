@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+import { FormUsuarioComponent } from './form-usuario/form-usuario.component';
 import { AppRoutingModule } from './app-routing.module';
-import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 
@@ -15,11 +17,13 @@ import { FormCancionesComponent } from './form-canciones/form-canciones.componen
 @NgModule({
   declarations: [
     AppComponent,
+    FormUsuarioComponent,
     FormDiscoComponent,
     FormArtistaComponent,
     FormCancionesComponent,
     FormConciertoComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,7 +31,12 @@ import { FormCancionesComponent } from './form-canciones/form-canciones.componen
     ReactiveFormsModule,
     CommonModule,
     RouterModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormDiscoComponent,
+    FormArtistaComponent,
+    FormCancionesComponent,
+    FormConciertoComponent
+
   ],
   providers: [],
   bootstrap: [AppComponent]
