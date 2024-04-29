@@ -6,7 +6,25 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  background-color: darkgrey;
+  background: linear-gradient(to bottom, rgba(60, 151, 201, 0.8) 0%, rgba(60, 151, 201, 0.8) 100%), url('assets/6037288.jpg');
+  background-size: cover;
+}
+input[type="text"] {
+  border-radius: 6px;
+}
+input[type="date"] {
+  border-radius: 6px;
+}
+
+input[type="text"]:focus {
+  background-color: transparent;
+  outline: none;
+  border-radius:6px;
+  border: 5px solid skyblue;
+}
+.degradado {
+  background: #CFE7FA;
+  background: linear-gradient(to right, #CFE7FA 0%, #6393C1 100%);
 }
 .testbutton {
   font-family: "Sen", sans-serif;
@@ -20,7 +38,10 @@ body {
   background: #63B8EE;
   background: linear-gradient(to top, #63B8EE, #468CCF);
 }
-
+.logo {
+    height:100px;
+    width:100px;
+}
   .testbutton:hover {
     color: #14396A !important;
     background: #468CCF;
