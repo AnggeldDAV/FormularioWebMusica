@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+/*// <uniquifier > : Use a unique and descriptive class name
+// <weight > : Use a value from 400 to 800
+*/
+body {
+  font-family: "Sen", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: darkgrey;
+}
+.testbutton {
+  font-family: "Sen", sans-serif;
+  color: #FEFFFC !important;
+  font-size: 14px;
+  text-shadow: 1px 1px 0px #2C3D4F;
+  box-shadow: 1px 1px 1px #BEE2F9;
+  padding: 10px 25px;
+  border-radius: 14px;
+  border: 2px solid #3866A3;
+  background: #63B8EE;
+  background: linear-gradient(to top, #63B8EE, #468CCF);
+}
+
+  .testbutton:hover {
+    color: #14396A !important;
+    background: #468CCF;
+    background: linear-gradient(to top, #468CCF, #63B8EE);
+  }
+  form{
+      margin-top:10%;
+      background-color:white;
+      border-radius:20px;
+      box-shadow:3px 3px 5px 0px ;
+  }
+   .relleno {
+       height:20px;
+   }

@@ -1,35 +1,47 @@
+<form class="container justify-content-center"[formGroup]="formArtistas">
+  <fieldset>
+    <legend class="text-center">Artista</legend>
+    <div class="row">
+      <div class="col col-6">
+        <div class="d-flex flex-column mb-3">
+          <label>Artista:</label>
+          <input type="text" id="artistasNombre" name="artistasNombre" formControlName="artistasNombre" required />
+          <!--<span *ngIf="this.formArtistas.get('artistasNombre')?.errors?.['required']">
+          (El nombre del artista no puede quedar vacío)
+        </span>
+        <span *ngIf="this.formArtistas.get('artistasNombre')?.errors?.['minlength']">
+          (Debe tener como mínimo 3 caracteres)
+        </span>-->
+        </div>
+        <div class="d-flex flex-column mb-3">
+          <label class="w-75">Año Nacimiento:</label>
+          <input type="date" id="artistasAnyo" name="artistasAnyo" formControlName="artistasAnyo" />
+        </div>
+      </div>
 
+      <div class="col col-6">
+        <div class="d-flex flex-column mb-3">
+          <label>Pertenece al grupo:</label>
+          <input type="text" id="artistasGrupo" name="artistasGrupo" formControlName="artistasGrupo" />
+        </div>
+        <div class="d-flex flex-column mb-3">
+          <label>Género/Tipo de Música:</label>
+          <input type="text" id="artistasGenero" name="artistasGenero" formControlName="artistasGenero" />
+        </div>
+      </div>
+      <div class="col col-6">
+        <div class="d-flex flex-column mb-3">
+          <label>Album:</label>
+          <input class="w-5" type="text" id="artistasAlbum" name="artistasAlbum" formControlName="artistasAlbum" />
+        </div>
+      </div>
 
-<form [formGroup]="formArtistas" (ngSubmit)="submit()">
-  <div>
-    <label>Artista:</label>
-    <input type="text" id="artistasNombre" name="artistasNombre" formControlName="artistasNombre" required />
-    <!--<span *ngIf="this.formArtistas.get('artistasNombre')?.errors?.['required']">
-      (El nombre del artista no puede quedar vacío)
-    </span>
-    <span *ngIf="this.formArtistas.get('artistasNombre')?.errors?.['minlength']">
-      (Debe tener como mínimo 3 caracteres)
-    </span>-->
-  </div>
-  <div>
-    <label>Año Nacimiento::</label>
-    <input type="date" id="artistasAnyo" name="artistasAnyo" formControlName="artistasAnyo" />
-  </div>
-  <div>
-    <label>Pertenece al grupo:</label>
-    <input type="text" id="artistasGrupo" name="artistasGrupo" formControlName="artistasGrupo" />
-  </div>
-  <div>
-    <label>Género/Tipo de Música:</label>
-    <input type="text" id="artistasGenero" name="artistasGenero" formControlName="artistasGenero" />
-  </div>
-  <div>
-    <label>Album:</label>
-    <input type="text" id="artistasAlbum" name="artistasAlbum" formControlName="artistasAlbum" />
-  </div>
-  <div>
-    <button type="submit">Enviar</button>
-    <button type="reset">Reset</button>
-  </div>
+    </div>
+    <div class="d-flex justify-content-around">
+      <button class="testbutton" type="submit">Enviar</button>
+      <button class="testbutton" type="reset">Reset</button>
+    </div>
+    <div class="relleno"></div>
+  </fieldset>
   </form>
 <div>{{resultado}}</div>
