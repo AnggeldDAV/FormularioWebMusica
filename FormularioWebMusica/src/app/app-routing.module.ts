@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'formCanciones', component: FormCancionesComponent },
   { path: 'formArtista', component: FormArtistaComponent },
   { path: 'formDisco', component: FormDiscoComponent },
-  { path: 'formUsuario', component: FormUsuarioComponent }
+  { path: 'formUsuario', component: FormUsuarioComponent },
+  { path: '', component: AppComponent }
 
 ];
 

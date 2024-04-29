@@ -4,7 +4,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { FormUsuarioComponent } from './form-usuario/form-usuario.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 
@@ -20,8 +19,8 @@ import { FormCancionesComponent } from './form-canciones/form-canciones.componen
     FormUsuarioComponent,
     FormDiscoComponent,
     FormArtistaComponent,
-    FormCancionesComponent,
-    FormConciertoComponent
+    FormConciertoComponent,
+    FormCancionesComponent
   ],
 
   imports: [
@@ -31,11 +30,7 @@ import { FormCancionesComponent } from './form-canciones/form-canciones.componen
     ReactiveFormsModule,
     CommonModule,
     RouterModule, 
-    ReactiveFormsModule,
-    FormDiscoComponent,
-    FormArtistaComponent,
-    FormCancionesComponent,
-    FormConciertoComponent
+    ReactiveFormsModule
 
   ],
   providers: [],

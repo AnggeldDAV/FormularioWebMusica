@@ -1,14 +1,25 @@
 
-<form (ngSubmit)="onSubmit()">
-  <label for="usuario">Usuario:</label>
-  <input type="text" id="usuario" [(ngModel)]="usuario" name="usuario" required>
-
-  <label for="contraseña">Contraseña:</label>
-  <input type="password" id="contrasena" [(ngModel)]="contrasena" name="contrasena" required>
-
-  <label for="email">Email:</label>
-  <input type="email" id="email" [(ngModel)]="email" name="email" required>
-
-  <button type="submit">Enviar</button>
+<form class="container w-50 " (ngSubmit)="onSubmit()">
+  <fieldset class="d-flex flex-column align-items-center">
+    <legend class="text-center">Usuario</legend>
+    <div class="d-flex flex-column mb-3 w-75">
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" [(ngModel)]="usuario" name="usuario" required>
+    </div>
+    <div class="d-flex flex-column mb-3 w-75">
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" [(ngModel)]="contrasena" name="contrasena" required>
+    </div>
+    <div class="d-flex flex-column mb-3 w-75">
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="email" name="email" required>
+    </div>
+    <div class="d-flex justify-content-around">
+      <button class="testbutton" type="submit">Enviar</button>
+    </div>
+    <div class="relleno"></div>
+  </fieldset>
 </form>
+
+
 
