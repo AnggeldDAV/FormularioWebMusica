@@ -1,33 +1,36 @@
 
 
-<form [formGroup]="formConcierto">
-  <div>
-    <div>
-      <label for="conciertoArtista">Artista</label>
-      <input type="text" id="conciertoArtista" formControlName="artistaConcierto" />
+<form class="container" [formGroup]="formConcierto">
+  <fieldset class="row">
+    <legend class="text-center">Conciertos</legend>
+    <div class="col-6">
+      <div class="d-flex flex-column mb-3">
+        <label for="conciertoArtista">Artista</label>
+        <input type="text" id="conciertoArtista" formControlName="artistaConcierto" />
+      </div>
+      <div id="validacionArtista"></div>
+      <div class="d-flex flex-column mb-3">
+        <label for="conciertoLugar">Lugar</label>
+        <input type="text" id="conciertoLugar" formControlName="lugarConcierto" />
+      </div>
+      <div id="validacionLugar"></div>
     </div>
-    <div id="validacionArtista"></div>
-    <div>
-      <label for="conciertoLugar">Lugar</label>
-      <input type="text" id="conciertoLugar" formControlName="lugarConcierto" />
+    <div class="col-6">
+      <div class="d-flex flex-column mb-3">
+        <label for="conciertoFecha">Fecha</label>
+        <input type="date" id="conciertoFecha" formControlName="fechaConcierto" />
+      </div>
+      <div id="validacionFecha"></div>
+      <div class="d-flex flex-column mb-3">
+        <label for="conciertoGenero">Género</label>
+        <input type="text" id="conciertoGenero" formControlName="generoConcierto" />
+      </div>
+      <div id="validacionGenero"></div>
     </div>
-    <div id="validacionLugar"></div>
-  </div>
-  <div>
-    <div>
-      <label for="conciertoFecha">Fecha</label>
-      <input type="date" id="conciertoFecha" formControlName="fechaConcierto" />
+    <div class="d-flex justify-content-around">
+      <button class="testbutton" (click)="validar()" type="submit">Enviar</button>
+      <button class="testbutton" (click)="reset()" type="reset">Reset</button>
     </div>
-    <div id="validacionFecha"></div>
-    <div>
-      <label for="conciertoGenero">Género</label>
-      <input type="text" id="conciertoGenero" formControlName="generoConcierto" />
-    </div>
-    <div id="validacionGenero"></div>
-
-  </div>
-  <div>
-    <button (click)="validar()" type="submit">Enviar</button>
-    <button (click)="reset()" type="reset">Reset</button>
-  </div>
+    <div class="relleno"></div>
+  </fieldset>
 </form>
