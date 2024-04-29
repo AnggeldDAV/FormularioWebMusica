@@ -9,11 +9,9 @@ body {
   background: linear-gradient(to bottom, rgba(60, 151, 201, 0.8) 0%, rgba(60, 151, 201, 0.8) 100%), url('assets/6037288.jpg');
   background-size: cover;
 }
-input[type="text"] {
+input[type="text"], input[type="date"], input[type="email"], input[type="password"] {
   border-radius: 6px;
-}
-input[type="date"] {
-  border-radius: 6px;
+  height: 40px;
 }
 
 input[type="text"]:focus {
@@ -42,17 +40,22 @@ input[type="text"]:focus {
     height:100px;
     width:100px;
 }
-  .testbutton:hover {
-    color: #14396A !important;
-    background: #468CCF;
-    background: linear-gradient(to top, #468CCF, #63B8EE);
-  }
-  form{
-      margin-top:10%;
-      background-color:white;
-      border-radius:20px;
-      box-shadow:3px 3px 5px 0px ;
-  }
-   .relleno {
-       height:20px;
-   }
+.testbutton:hover {
+  color: #14396A !important;
+  background: #468CCF;
+  background: linear-gradient(to top, #468CCF, #63B8EE);
+}
+form{
+    margin-top:10%;
+    background-color:white;
+    border-radius:20px;
+    box-shadow:3px 3px 5px 0px ;
+}
+
+.error {
+    height: 20px;
+    color: red;
+}
+.relleno {
+    height:20px;
+}

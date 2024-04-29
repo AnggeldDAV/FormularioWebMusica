@@ -10,7 +10,7 @@ export class FormConciertoComponent {
   formConcierto = new FormGroup({
     artistaConcierto: new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(10), Validators.pattern('^[a-zA-Z0-9]*$')]),
     lugarConcierto: new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(10), Validators.pattern('^[a-zA-Z0-9]*$')]),
-    fechaConcierto: new FormControl(),
+    fechaConcierto: new FormControl(null, [Validators.required]),
     generoConcierto: new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(10), Validators.pattern('^[a-zA-Z0-9]*$')])
   });
 
@@ -32,8 +32,8 @@ export class FormConciertoComponent {
     } else {
       if(errorArtista != null) errorArtista.innerHTML = '';
     }
-    if (!this.formConcierto.get('lugarFecha')?.valid) {
-      if (errorFecha != null) errorFecha.innerHTML = 'Introduce un lugar válido';
+    if (!this.formConcierto.get('fechaConcierto')?.valid) {
+      if (errorFecha != null) errorFecha.innerHTML = 'Introduce una fecha válida';
     } else {
       if (errorFecha != null) errorFecha.innerHTML = '';
     }
