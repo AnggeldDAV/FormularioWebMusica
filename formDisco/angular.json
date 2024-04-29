@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FormularioWebMusica": {
+    "formDisco": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/formulario-web-musica",
+            "outputPath": "dist/form-disco",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "FormularioWebMusica:build:production"
+              "buildTarget": "formDisco:build:production"
             },
             "development": {
-              "buildTarget": "FormularioWebMusica:build:development"
+              "buildTarget": "formDisco:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "FormularioWebMusica:build"
+            "buildTarget": "formDisco:build"
           }
         },
         "test": {
@@ -102,11 +102,5 @@
         }
       }
     }
-  },
-  "cli": {
-
-
-    "analytics": "8740fe7a-4d65-4f57-b32a-23d74ca1e5ae"
-
   }
 }
