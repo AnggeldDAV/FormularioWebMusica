@@ -1,22 +1,22 @@
 <form class="container" [formGroup]="formCanciones" (ngSubmit)="onSubmit()">
   <fieldset class="row">
     <legend class="text-center">Canciones</legend>
-    <div class="col-6">
-      <div class="d-flex flex-column mb-3">
+    <div class="col-lg-6 col-sm-12 d-flex flex-column align-items-center">
+      <div class="d-flex flex-column mb-3 w-75">
         <label>Título: </label>
         <input type="text" id="tituloCanciones" name="tituloCanciones" formControlName="tituloCanciones" />
         <div *ngIf="this.formCanciones.get('tituloCanciones')?.invalid && (this.formCanciones.get('tituloCanciones')?.dirty || this.formCanciones.get('tituloCanciones')?.touched)">
           Titulo invalido
         </div>
       </div>
-      <div class="d-flex flex-column mb-3">
+      <div class="d-flex flex-column mb-3 w-75">
         <label>Género: </label>
         <input type="text" id="generoCanciones" name="generoCanciones" formControlName="generoCanciones" />
         <div *ngIf="this.formCanciones.get('generoCanciones')?.invalid && (this.formCanciones.get('generoCanciones')?.dirty || this.formCanciones.get('generoCanciones')?.touched)">
           Género invalido
         </div>
       </div>
-      <div class="d-flex flex-column mb-3">
+      <div class="d-flex flex-column mb-3 w-75">
         <label>Año: </label>
         <input type="date" id="anyoCanciones" name="anyoCanciones" formControlName="anyoCanciones" />
         <div *ngIf="this.formCanciones.get('anyoCanciones')?.invalid && (this.formCanciones.get('anyoCanciones')?.dirty || this.formCanciones.get('anyoCanciones')?.touched)">
@@ -24,15 +24,15 @@
         </div>
       </div>
     </div>
-    <div class="col-6">
-      <div class="d-flex flex-column mb-3">
+    <div class="col-lg-6 col-sm-12 d-flex flex-column align-items-center">
+      <div class="d-flex flex-column mb-3 w-75">
         <label>Artista: </label>
         <input type="text" id="artistaCanciones" name="artistaCanciones" formControlName="artistaCanciones" />
         <div *ngIf="this.formCanciones.get('artistaCanciones')?.invalid && (this.formCanciones.get('artistaCanciones')?.dirty || this.formCanciones.get('artistaCanciones')?.touched)">
           Artista invalido
         </div>
       </div>
-      <div class="d-flex flex-column mb-3">
+      <div class="d-flex flex-column mb-3 w-75">
         <label>Disco: </label>
         <input type="text" id="discoCanciones" name="discoCanciones" formControlName="discoCanciones" />
         <div *ngIf="this.formCanciones.get('discoCanciones')?.invalid && (this.formCanciones.get('discoCanciones')?.dirty || this.formCanciones.get('discoCanciones')?.touched)">
