@@ -1,8 +1,9 @@
-
+<!--formulario de login de usuario-->
 <form [formGroup]="myForm" class="container w-50 " (ngSubmit)="onSubmit()">
+
   <fieldset class="d-flex flex-column align-items-center">
     <legend class="text-center">Usuario</legend>
-    <div class="d-flex flex-column mb-3 w-75">
+    <div class="d-flex flex-column mb-3 w-75"><!--El w-75 establece el ancho del input, de tal forma que se hace un diseño responsive, mb-3 significa margin botton, y establece el margen que queremos dejar respecto al elemento que se encuentra debajo-->
       <label for="usuario">Usuario:</label>
       <input type="text" id="usuario" formControlName="usuario" name="usuario" required>
       <div *ngIf="this.myForm.get('usuario')?.invalid && (this.myForm.get('usuario')?.dirty || this.myForm.get('usuario')?.touched)">
