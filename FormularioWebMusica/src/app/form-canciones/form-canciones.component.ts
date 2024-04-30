@@ -9,6 +9,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms'
 export class FormCancionesComponent {
   formCanciones: FormGroup;
   mensaje: string = "";
+  colorValido: string = "";
   constructor(private fb: FormBuilder) {
 
     let today = new Date();
@@ -28,9 +29,11 @@ export class FormCancionesComponent {
 
   onSubmit() {
     if (this.formCanciones.valid) {
+      this.colorValido = "color: green;";
       this.mensaje = "Formulario valido"
       console.log(this.formCanciones.value);
     } else {
+      this.colorValido = "color: red;";
       this.mensaje = "Formulario invalido"
     }
   }
