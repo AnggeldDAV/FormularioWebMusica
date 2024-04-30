@@ -6,6 +6,7 @@
         <label>Título: </label>
         <input type="text" id="tituloCanciones" name="tituloCanciones" formControlName="tituloCanciones" />
         <div *ngIf="this.formCanciones.get('tituloCanciones')?.invalid && (this.formCanciones.get('tituloCanciones')?.dirty || this.formCanciones.get('tituloCanciones')?.touched)">
+          <!--Este *ngIf nos dice que es (invalid) en caso de no pasa las validaciones, (dirty) cuando ya se ha tocado el control y (touched) cuando el campo ya se ha tocado-->
           Titulo invalido
         </div>
       </div>
