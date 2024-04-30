@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-form-usuario',
@@ -6,14 +8,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-usuario.component.css']
 })
 export class FormUsuarioComponent {
-  usuario: string = '';
-  contrasena: string = '';
-  email: string = '';
+  myForm: FormGroup;
+  mensaje: string = "";
 
- onSubmit() {
+  constructor(
+    public fb: FormBuilder
+  ) {
+    this.myForm = this.fb.group({
+      usuario:  ['', [Validators.required, Validators.pattern('^[A-Za-z ]+$'), Validators.minLength(3), Validators.maxLength(50)]],
+      contrasena: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
+      email: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]]
+    });
+  }
 
-  console.log('Usuario:', this.usuario);
-  console.log('Contraseña:', this.contrasena);
-  console.log('Email:', this.email);
-}
+  onSubmit() {
+    if (this.myForm.valid) {
+      console.log(this.myForm.value);
+      this.mensaje = "Formulario valido"
+    } else {
+      this.mensaje = "Formulario invalido"
+    }
+  }
 }
