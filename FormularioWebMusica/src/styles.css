@@ -6,17 +6,17 @@ body {
   background: linear-gradient(to bottom, rgba(60, 151, 201, 0.8) 0%, rgba(60, 151, 201, 0.8) 100%), url('assets/6037288.jpg');
   background-size: cover;
 }
-input[type="text"], input[type="date"], input[type="email"], input[type="password"] {
+input[type="number"], input[type="date"], input[type="email"], input[type="password"], input[type="text"] {
   border-radius: 6px;
   height: 40px;
 }
 
-input[type="text"]:focus {
-  background-color: transparent;
-  outline: none;
-  border-radius:6px;
-  border: 5px solid skyblue;
-}
+  input[type="number"]:focus, input[type="text"]:focus {
+    background-color: transparent;
+    outline: none;
+    border-radius: 6px;
+    border: 5px solid skyblue;
+  }
 .degradado {
   background: #CFE7FA;
   background: linear-gradient(to right, #CFE7FA 0%, #6393C1 100%);
