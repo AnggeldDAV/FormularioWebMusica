@@ -17,7 +17,7 @@ export class FormUsuarioComponent {
     this.myForm = this.fb.group({
       usuario:  ['', [Validators.required, Validators.pattern('^[A-Za-z ]+$'), Validators.minLength(3), Validators.maxLength(50)]],
       contrasena: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
-      email: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]]
+      email: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50), Validators.pattern(/^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/)]]
     });
   }
 
